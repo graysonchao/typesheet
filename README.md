@@ -6,6 +6,10 @@ I made it because I couldn't find an easy option online while developing a game.
 
 I welcome contributions, but I don't plan to spend more than a few minutes a month maintaining this repo.
 
+![an example of a generated image](example.png)
+
+an example image. switch to dark mode if you can't see it.
+
 ## How to use
 
 `pip install pillow tcod numpy PIL`
