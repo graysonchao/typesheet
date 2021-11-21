@@ -39,8 +39,3 @@ Exact command used to generate the example image:
 python make_tileset.py Px437_IBM_Model3x_Alt3.ttf 8 16 ibm_model3x_8x16.png
 ```
 Font file was found at https://int10h.org/oldschool-pc-fonts
-
-## Also
-
-This code is released under whatever licenses are appropriate given the dependencies.
-I claim no ownership etc. and you can use it for whatever you want. I don't care.
