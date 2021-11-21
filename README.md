@@ -13,30 +13,28 @@ an example image. switch to dark mode if you can't see it.
 ## How to use
 
 ### 1. Install
-`pip install pillow tcod numpy PIL`
-
-There might be more dependencies missing. If so, you should install them the same way.  I'll accept PRs to update the list of deps, but I rarely write Python and can't be bothered to set up a clean-room environment to figure them out myself.
+`pip install pillow tcod numpy`
 
 ### 2. Use
 See the usage string:
 ```
 $ ./make_tileset.py -h
-$ python3 make_tileset.py -h                                                                                                                                                                                                                                                                                        126 ↵
-usage: make_tileset.py [-h] input_file width_px height_px output_file
+$ python3 make_tileset.py -h
+usage: make_tileset.py [-h] --height HEIGHT [--width WIDTH] [-o OUT] input_file
 
 positional arguments:
-  input_file   a truetype (.ttf) font file
-  width_px     width of a glpyh('s bounding box) in px
-  height_px    height of a glyph('s bounding box) in px
-  output_file  the path to write the output file
+  input_file         A truetype (.ttf) font file.
 
-optional arguments:
-  -h, --help   show this help message and exit
+options:
+  -h, --help         show this help message and exit
+  --height HEIGHT    Height of each glyph (bounding box) in pixels.
+  --width WIDTH      Width of each glyph (bounding box) in pixels. (Optional)
+  -o OUT, --out OUT  The output file. (Defaults to <input>.png)
 ```
 
 Exact command used to generate the example image:
 ```
-python make_tileset.py Px437_IBM_Model3x_Alt3.ttf 8 16 ibm_model3x_8x16.png
+python make_tileset.py Px437_IBM_Model3x_Alt3.ttf --width 8 --height 16
 ```
 Font file was found at https://int10h.org/oldschool-pc-fonts
 
