@@ -48,10 +48,10 @@ def render(buf: NDArray[np.uint8], font: ImageFont, width_px: int, height_px: in
     return canvas
 
 parser = argparse.ArgumentParser()
-parser.add_argument("input_file")
+parser.add_argument("input_file", help="a truetype (.ttf) font file")
 parser.add_argument("width_px", type=int, help="width of a glpyh('s bounding box) in px")
 parser.add_argument("height_px", type=int, help="height of a glyph('s bounding box) in px")
-parser.add_argument("output_file")
+parser.add_argument("output_file", help="the path to write the output file")
 args = parser.parse_args()
 
 buf = write_cp437(args.input_file, args.width_px, args.height_px)
